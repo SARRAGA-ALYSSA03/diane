@@ -6,144 +6,199 @@
 <title>Diane Manto | Profile</title>
 
 <style>
-    * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-    }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    body {
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        min-height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background: linear-gradient(135deg, #667eea, #764ba2);
-        padding: 20px;
-    }
+body {
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    background: radial-gradient(circle at top, #7f5cff, #2b0a3d);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    color: #fff;
+}
 
-    .profile-card {
-        background: #ffffff;
-        width: 100%;
-        max-width: 420px;
-        border-radius: 20px;
-        box-shadow: 0 15px 35px rgba(0,0,0,0.25);
-        overflow: hidden;
-        animation: slideUp 1s ease;
-    }
+.profile-card {
+    background: linear-gradient(180deg, #1c102f, #12081f);
+    width: 100%;
+    max-width: 420px;
+    border-radius: 20px;
+    padding: 30px 25px;
+    text-align: center;
+    box-shadow: 0 20px 45px rgba(0,0,0,0.5);
+    animation: fadeUp 1s ease;
+}
 
-    @keyframes slideUp {
-        from {
-            opacity: 0;
-            transform: translateY(30px);
-        }
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
     }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
-    .profile-header {
-        background: linear-gradient(135deg, #764ba2, #667eea);
-        padding: 30px;
-        text-align: center;
-        color: white;
-    }
+/* Profile Image */
+.profile-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid #9b7bff;
+    margin: 0 auto 15px;
+}
 
-    .profile-header img {
-        width: 120px;
-        height: 120px;
-        border-radius: 50%;
-        border: 4px solid white;
-        object-fit: cover;
-        margin-bottom: 10px;
-    }
+.profile-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 
-    .profile-header h1 {
-        font-size: 24px;
-        margin-bottom: 5px;
-    }
+/* Name & title */
+h1 {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
 
-    .profile-header p {
-        font-size: 14px;
-        opacity: 0.9;
-    }
+.title {
+    font-size: 13px;
+    color: #bbaaff;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
 
-    .profile-body {
-        padding: 25px;
-    }
+/* About */
+.about {
+    font-size: 14px;
+    color: #ddd;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
 
-    .info {
-        margin-bottom: 15px;
-        font-size: 14px;
-        color: #444;
-    }
+/* Info */
+.info {
+    text-align: left;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
 
-    .info span {
-        font-weight: bold;
-        color: #222;
-    }
+.info div {
+    margin-bottom: 8px;
+}
 
-    .social {
-        margin-top: 20px;
-    }
+.info span {
+    color: #bbaaff;
+    font-weight: 600;
+}
 
-    .social a {
-        display: block;
-        text-align: center;
-        text-decoration: none;
-        background: #1877f2;
-        color: white;
-        padding: 12px;
-        border-radius: 8px;
-        font-weight: 600;
-        transition: 0.3s;
-    }
+/* Skills */
+.skills {
+    margin-bottom: 25px;
+}
 
-    .social a:hover {
-        background: #0f5bd8;
-        transform: scale(1.03);
-    }
+.skills h3 {
+    font-size: 15px;
+    margin-bottom: 10px;
+    color: #d7c9ff;
+}
 
-    footer {
-        text-align: center;
-        font-size: 12px;
-        color: #999;
-        padding-bottom: 15px;
-    }
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+}
 
-    @media (max-width: 480px) {
-        .profile-header h1 {
-            font-size: 22px;
-        }
+.skill-tags span {
+    background: linear-gradient(135deg, #7f5cff, #b76bff);
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    color: #fff;
+}
+
+/* Social */
+.social a {
+    display: block;
+    text-decoration: none;
+    background: linear-gradient(135deg, #7f5cff, #b76bff);
+    padding: 12px;
+    border-radius: 10px;
+    color: white;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.social a:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(127,92,255,0.5);
+}
+
+/* Footer */
+footer {
+    margin-top: 20px;
+    font-size: 12px;
+    color: #aaa;
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 22px;
     }
+}
 </style>
 </head>
 <body>
 
 <div class="profile-card">
 
-    <div class="profile-header">
+    <!-- Clickable Profile Picture (Reference) -->
+    <a href="https://www.facebook.com/" target="_blank" class="profile-img">
         <img src="profile2.jpg" alt="Profile Picture">
-        <h1>Diane Manto</h1>
-        <p>Personal Profile</p>
+    </a>
+
+    <h1>Diane Manto</h1>
+    <div class="title">STUDENT PROFILE</div>
+
+    <div class="about">
+        A motivated student who enjoys learning new technologies, improving skills,
+        and exploring creative digital designs.
     </div>
 
-    <div class="profile-body">
-        <div class="info"><span>Age:</span> 20</div>
-        <div class="info"><span>Location:</span> Philippines</div>
-        <div class="info"><span>Hobby:</span> Reading & Traveling</div>
-        <div class="info"><span>Email:</span> dianemanto@email.com</div>
+    <div class="info">
+        <div><span>Age:</span> 20</div>
+        <div><span>Location:</span> Philippines</div>
+        <div><span>Email:</span> dianemanto@email.com</div>
+        <div><span>Interests:</span> Technology, Design, Learning</div>
+    </div>
 
-        <div class="social">
-            <a href="facebook.com/HAHAHAHAHAHAHAHAHAHAHAAHAHAHA" target="_blank">
-                🔗 Visit my Facebook
-            </a>
+    <div class="skills">
+        <h3>Skills</h3>
+        <div class="skill-tags">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+            <span>UI Design</span>
+            <span>Networking</span>
         </div>
     </div>
 
+    <div class="social">
+        <a href=http://facebook.com/HAHAHAHAHAHAHAHAHAHAHAAHAHAHA/" target="_blank">
+            🔗 Visit my Facebook
+        </a>
+    </div>
+
     <footer>
-        © 2026 Diane Manto
+        © 2026 • Personal Profile Page
     </footer>
 
 </div>
