@@ -1,38 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>My Profile</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            text-align: center;
-            padding: 40px;
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Diane Manto | Profile</title>
+
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(135deg, #667eea, #764ba2);
+        padding: 20px;
+    }
+
+    .profile-card {
+        background: #ffffff;
+        width: 100%;
+        max-width: 420px;
+        border-radius: 20px;
+        box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+        overflow: hidden;
+        animation: slideUp 1s ease;
+    }
+
+    @keyframes slideUp {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
         }
-        .profile {
-            background: white;
-            padding: 30px;
-            max-width: 400px;
-            margin: auto;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        to {
+            opacity: 1;
+            transform: translateY(0);
         }
-        img {
-            width: 120px;
-            border-radius: 50%;
+    }
+
+    .profile-header {
+        background: linear-gradient(135deg, #764ba2, #667eea);
+        padding: 30px;
+        text-align: center;
+        color: white;
+    }
+
+    .profile-header img {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        border: 4px solid white;
+        object-fit: cover;
+        margin-bottom: 10px;
+    }
+
+    .profile-header h1 {
+        font-size: 24px;
+        margin-bottom: 5px;
+    }
+
+    .profile-header p {
+        font-size: 14px;
+        opacity: 0.9;
+    }
+
+    .profile-body {
+        padding: 25px;
+    }
+
+    .info {
+        margin-bottom: 15px;
+        font-size: 14px;
+        color: #444;
+    }
+
+    .info span {
+        font-weight: bold;
+        color: #222;
+    }
+
+    .social {
+        margin-top: 20px;
+    }
+
+    .social a {
+        display: block;
+        text-align: center;
+        text-decoration: none;
+        background: #1877f2;
+        color: white;
+        padding: 12px;
+        border-radius: 8px;
+        font-weight: 600;
+        transition: 0.3s;
+    }
+
+    .social a:hover {
+        background: #0f5bd8;
+        transform: scale(1.03);
+    }
+
+    footer {
+        text-align: center;
+        font-size: 12px;
+        color: #999;
+        padding-bottom: 15px;
+    }
+
+    @media (max-width: 480px) {
+        .profile-header h1 {
+            font-size: 22px;
         }
-    </style>
+    }
+</style>
 </head>
 <body>
 
-    <div class="profile">
-        <img src="https://via.placeholder.com/120" alt="Profile Picture">
-        <h1>Lee Diane Manto</h1>
-        <p><strong>Course:</strong> Computer Engineering Technology</p>
-        <p><strong>Skills:</strong> HTML, CSS, JavaScript</p>
-        <p><strong>Hobby:</strong> Gaming & Designing</p>
+<div class="profile-card">
+
+    <div class="profile-header">
+        <img src="profile2.jpg" alt="Profile Picture">
+        <h1>Diane Manto</h1>
+        <p>Personal Profile</p>
     </div>
+
+    <div class="profile-body">
+        <div class="info"><span>Age:</span> 20</div>
+        <div class="info"><span>Location:</span> Philippines</div>
+        <div class="info"><span>Hobby:</span> Reading & Traveling</div>
+        <div class="info"><span>Email:</span> dianemanto@email.com</div>
+
+        <div class="social">
+            <a href="facebook.com/HAHAHAHAHAHAHAHAHAHAHAAHAHAHA" target="_blank">
+                🔗 Visit my Facebook
+            </a>
+        </div>
+    </div>
+
+    <footer>
+        © 2026 Diane Manto
+    </footer>
+
+</div>
 
 </body>
 </html>
