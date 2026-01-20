@@ -13,193 +13,167 @@
 }
 
 body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg, #6f42c1, #9b59b6);
     min-height: 100vh;
-    font-family: 'Segoe UI', Tahoma, sans-serif;
-    background: radial-gradient(circle at top, #7f5cff, #2b0a3d);
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 20px;
-    color: #fff;
 }
 
-.profile-card {
-    background: linear-gradient(180deg, #1c102f, #12081f);
+.profile-container {
+    background: #ffffff;
     width: 100%;
-    max-width: 420px;
-    border-radius: 20px;
-    padding: 30px 25px;
-    text-align: center;
-    box-shadow: 0 20px 45px rgba(0,0,0,0.5);
-    animation: fadeUp 1s ease;
-}
-
-@keyframes fadeUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Profile Image */
-.profile-img {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
+    max-width: 800px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
     overflow: hidden;
-    border: 4px solid #9b7bff;
-    margin: 0 auto 15px;
 }
 
-.profile-img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.profile-header {
+    background: #6f42c1;
+    color: white;
+    padding: 25px;
+    text-align: center;
 }
 
-/* Name & title */
-h1 {
-    font-size: 24px;
+.profile-header h1 {
+    font-size: 28px;
     margin-bottom: 5px;
 }
 
-.title {
-    font-size: 13px;
-    color: #bbaaff;
-    letter-spacing: 1px;
+.profile-header p {
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+.profile-content {
+    display: flex;
+    gap: 25px;
+    padding: 25px;
+    flex-wrap: wrap;
+}
+
+.profile-image {
+    flex: 1;
+    min-width: 220px;
+    text-align: center;
+}
+
+.profile-image img {
+    width: 100%;
+    max-width: 250px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.profile-details {
+    flex: 2;
+    min-width: 250px;
+}
+
+.profile-details h2 {
+    color: #6f42c1;
+    margin-bottom: 10px;
+}
+
+.profile-details p {
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.info {
     margin-bottom: 15px;
 }
 
-/* About */
-.about {
-    font-size: 14px;
-    color: #ddd;
-    line-height: 1.6;
-    margin-bottom: 20px;
+.info strong {
+    color: #6f42c1;
 }
 
-/* Info */
-.info {
-    text-align: left;
-    font-size: 14px;
-    margin-bottom: 20px;
-}
-
-.info div {
-    margin-bottom: 8px;
-}
-
-.info span {
-    color: #bbaaff;
-    font-weight: 600;
-}
-
-/* Skills */
 .skills {
-    margin-bottom: 25px;
+    margin-top: 15px;
 }
 
-.skills h3 {
-    font-size: 15px;
-    margin-bottom: 10px;
-    color: #d7c9ff;
-}
-
-.skill-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    justify-content: center;
-}
-
-.skill-tags span {
-    background: linear-gradient(135deg, #7f5cff, #b76bff);
+.skills span {
+    display: inline-block;
+    background: #eee;
     padding: 6px 12px;
+    margin: 5px 5px 0 0;
     border-radius: 20px;
-    font-size: 12px;
-    color: #fff;
+    font-size: 13px;
 }
 
-/* Social */
+.social {
+    margin-top: 20px;
+}
+
 .social a {
-    display: block;
     text-decoration: none;
-    background: linear-gradient(135deg, #7f5cff, #b76bff);
-    padding: 12px;
-    border-radius: 10px;
+    background: #1877f2;
     color: white;
-    font-weight: 600;
-    transition: 0.3s;
+    padding: 10px 16px;
+    border-radius: 6px;
+    font-weight: bold;
+    display: inline-block;
 }
 
 .social a:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 20px rgba(127,92,255,0.5);
+    background: #0f5bd8;
 }
 
-/* Footer */
-footer {
-    margin-top: 20px;
-    font-size: 12px;
-    color: #aaa;
-}
-
-/* Mobile */
-@media (max-width: 480px) {
-    h1 {
-        font-size: 22px;
+/* Mobile Responsive */
+@media (max-width: 600px) {
+    .profile-content {
+        flex-direction: column;
+        text-align: center;
     }
 }
 </style>
 </head>
 <body>
 
-<div class="profile-card">
+<div class="profile-container">
 
-    <!-- Clickable Profile Picture (Reference) -->
-    <a href="https://www.facebook.com/" target="_blank" class="profile-img">
-        <img src="profile2.jpg" alt="Profile Picture">
-    </a>
-
-    <h1>Diane Manto</h1>
-    <div class="title">STUDENT PROFILE</div>
-
-    <div class="about">
-        A motivated student who enjoys learning new technologies, improving skills,
-        and exploring creative digital designs.
+    <div class="profile-header">
+        <h1>Diane Manto</h1>
+        <p>Student Profile</p>
     </div>
 
-    <div class="info">
-        <div><span>Age:</span> 20</div>
-        <div><span>Location:</span> Philippines</div>
-        <div><span>Email:</span> dianemanto@email.com</div>
-        <div><span>Interests:</span> Technology, Design, Learning</div>
-    </div>
+    <div class="profile-content">
 
-    <div class="skills">
-        <h3>Skills</h3>
-        <div class="skill-tags">
-            <span>HTML</span>
-            <span>CSS</span>
-            <span>JavaScript</span>
-            <span>UI Design</span>
-            <span>Networking</span>
+        <div class="profile-image">
+            <img src="profile2.jpg" alt="Profile Picture">
         </div>
-    </div>
 
-    <div class="social">
-        <a href=http://facebook.com/HAHAHAHAHAHAHAHAHAHAHAAHAHAHA/" target="_blank">
-            🔗 Visit my Facebook
-        </a>
-    </div>
+        <div class="profile-details">
+            <h2>About Me</h2>
+            <p>
+                I am a student who is eager to learn new skills, explore technology,
+                and improve my knowledge through hands-on experience.
+            </p>
 
-    <footer>
-        © 2026 • Personal Profile Page
-    </footer>
+            <div class="info"><strong>Age:</strong> 20</div>
+            <div class="info"><strong>Location:</strong> Philippines</div>
+            <div class="info"><strong>Email:</strong> dianemanto@email.com</div>
+
+            <div class="skills">
+                <strong>Skills:</strong><br>
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>Basic JavaScript</span>
+                <span>Computer Literacy</span>
+            </div>
+
+            <div class="social">
+                <a href="https://www.facebook.com/HAHAHAHAHAHAHAHAHAHAHAAHAHAHA" target="_blank">
+                    Visit my Facebook
+                </a>
+            </div>
+        </div>
+
+    </div>
 
 </div>
 
